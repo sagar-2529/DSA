@@ -33,9 +33,8 @@ class node{
         node* n = new node(d);
         tail -> next = n;
         tail = n;
-
-
-    }
+ }
+ 
     void deletenode(int position, node* &head){
 
         if(position == 1){
