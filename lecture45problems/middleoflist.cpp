@@ -1,4 +1,4 @@
-// reverse linked list
+// middle of lists
 #include<iostream>
 using namespace std;
 
@@ -55,34 +55,40 @@ void insertattail(node* &tail, int d){
          nodetobeinsert -> next = temp -> next;
          temp -> next =  nodetobeinsert;
     }
-void reverse(node* &head, node* &curr, node* &prev){
-
-        if( curr == NULL){
-            head = prev;
-            return ;
+    int lengthofstring(node* &head){
+        node* temp = head;
+        int cnt = 0;
+        while(temp != NULL){
+            temp = temp-> next;
+            cnt++;
         }
-        node* forward = NULL;
-        forward = curr -> next;
-      
-        reverse(head,forward,curr);
-          curr -> next = prev;
-
-     }
-  
-    
-    int main(){
-        node* head = new node(5); 
-        node* tail = head;
-        insertatposition(tail,head,2,12);
-        insertatposition(tail,head,2,7);
-        insertatposition(tail,head,2,99);
-        cout << " original list is : ";
-        print(head);
-        node* prev  = NULL;
-        node* curr = head;
-        reverse(head,curr,prev);
-        cout << "reversed list is : ";
-        print(head);
-        
-        
+        return cnt;
     }
+    node* middleoflist(node* head){
+        node* temp = head;
+       int a = lengthofstring(head);
+       int cnt = (a/2)+1;
+       int test = 1;
+          while(test != cnt){
+            temp = temp -> next;
+            test++;
+            }
+       return temp;
+    
+
+       }
+       int main(){
+        node* head = new node(7);
+        node* tail = head;
+        insertatposition(tail,head,2,8);
+        insertatposition(tail,head,2,9);
+        insertatposition(tail,head,2,10);
+        insertatposition(tail,head,2,25);
+        insertatposition(tail,head,2,25);
+        print(head);
+        node* ans = middleoflist(head);
+        cout << " middle of node is : "<< ans -> data;
+       }
+     
+
+    
