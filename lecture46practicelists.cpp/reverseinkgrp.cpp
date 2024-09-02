@@ -91,20 +91,34 @@ class node{
     }
 
 
+    node* reverse_in_k_grp(node* &head, int k){
+       
+       if( head == NULL){
+          return NULL;
+       }
+       node* curr = head;
+       node* prev = NULL;
+       node* next = NULL;
+
+       int cnt = 0;
+
+       while( cnt < k){
+         next = curr -> next;
+         curr -> next = prev;
+         prev = curr;
+         curr = next;
+         cnt++;
+       }
+       if( next != NULL ){
+          head -> next = reverse_in_k_grp(next,k);
+       }
+       
+       return prev;
+
+}
+
+
 int main(){
-//     // create a new node
-//    node* n1 = new node(2529);
-//     cout << n1 -> data << endl;
-//     cout << n1-> next << endl;
-
-
-//     // head pointer 
-//     node* head = n1;
-//     print(head);
-
-//    insertathead(head,45);
-//    node* tail = n1;
-//    print(head);
 
 node* n1 = new node(7);
 node * head = n1;
@@ -112,10 +126,15 @@ node * head = n1;
 node* tail = n1;
 insertathead(head,9);
 insertattail(tail,99);
-insertatposition(tail,head,1,18);
-insertatposition(tail,head,5,45);
-
-print (head);
+insertatposition(tail,head,2,5);
+insertatposition(tail,head,2,6);
+insertatposition(tail,head,2,4);
+cout << " before reversing : " ;
+print(head);
+cout << endl;
+node* temp =  reverse_in_k_grp(head,3);
+cout << " after reversing : ";
+print(temp);
 
     
 
