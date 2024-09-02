@@ -125,9 +125,6 @@ int main(){
 
     node* tail = NULL;
     insertnode(tail,5,3);
-    insertnode(tail,3,3);
-     insertnode(tail,3,3);
-    insertnode(tail,3,3);
     check_circular(tail);
     print(tail);
    
