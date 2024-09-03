@@ -156,10 +156,10 @@ int main() {
     node* a = floydsAlgo(head);
 
     if ( a == NULL){
-        cout << " mission successful "<< endl;
+        cout << " remove loop mission successful "<< endl;
     }
     else{
-       cout << " shiv baba pyara ";
+       cout << " mission unsuccessful ";
     }
 
     // Cleanup
