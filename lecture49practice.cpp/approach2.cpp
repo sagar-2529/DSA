@@ -11,6 +11,7 @@ class node{
         this-> next = NULL;
     }
     
+    
 };
 
     void insertathead(node* &head, int d){
