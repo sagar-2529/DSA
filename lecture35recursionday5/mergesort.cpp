@@ -22,8 +22,8 @@ void merge(int arr[], int s, int e){
    for(int i =0 ; i < n2; i++){
     arr2[i] = arr[k++];
    }
-   int i =0;
-   int j=0;
+   int i = 0;
+   int j = 0;
    int m = s;
 
    while( i < n1 && j < n2){
@@ -34,10 +34,10 @@ void merge(int arr[], int s, int e){
         arr[m++]= arr2[j++];
     }
    }
-   while(i<n1){
+   while( i < n1 ){
      arr[m++] = arr1[i++];
    }
-    while(j<n2){
+    while( j < n2 ){
      arr[m++] = arr2[j++];
    }
 
@@ -52,9 +52,9 @@ void mergesort(int arr[], int s, int e){
 
     mergesort(arr,s,mid);
 
-     mergesort(arr,mid+1,e);
+    mergesort(arr,mid+1,e);
 
-     merge(arr,s,e);
+    merge(arr,s,e);
 
 
 

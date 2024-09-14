@@ -139,6 +139,8 @@ void add(const vector<int>& arr1, const vector<int>& arr2, vector<int>& arr3) {
     reverse(arr3.begin(), arr3.end());  
 }
 
+// convert array again to a linked list
+
 node* convert2(vector<int> arr){
     int i = 0;
     node* temp = new node(arr[i]);
