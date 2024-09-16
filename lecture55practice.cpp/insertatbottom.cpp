@@ -27,7 +27,6 @@ int main(){
     int element;
     cin >> element;
     insert_an_element(s,s.size(),count,element);
-    cout << s.top() << endl;
 
     stack<int> tempstack = s;
     
