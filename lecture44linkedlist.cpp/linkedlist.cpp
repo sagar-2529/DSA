@@ -107,11 +107,13 @@ int main(){
 //    print(head);
 
 node* n1 = new node(7);
-node * head = n1;
 
+node * head = n1;
 node* tail = n1;
+
 insertathead(head,9);
 insertattail(tail,99);
+
 insertatposition(tail,head,1,18);
 insertatposition(tail,head,5,45);
 

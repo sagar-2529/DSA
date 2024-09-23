@@ -9,19 +9,13 @@ void selection_sort(int *arr, int n){
         return ;
     }
    
-
     int minindex = 0;
-
-
     for( int i = 1; i< n; i++){
         if(arr[i] < arr[minindex]){
             minindex = i;
         }
         swap (arr[0], arr[minindex]);
-
-       
-            
-        
+     
     }
      selection_sort(arr +1, n-1);
 }
